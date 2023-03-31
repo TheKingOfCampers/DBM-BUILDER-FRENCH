@@ -43,7 +43,7 @@ Theme complètement personnalisable pour Discord Bot Maker V2.0 traduit en fran�
 
 Open Source
 
-## Credits
+##Credits
 
 <p align="center">
   Theme créé par: <a href="https://discord.com/users/172782058396057602" rel="nofollow">XinXyla</a>
