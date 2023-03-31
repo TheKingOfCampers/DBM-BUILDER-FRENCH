@@ -5,9 +5,7 @@
 </p>
 
 
-<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de <a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a>
-
-nous nous efforçons d'unir les communautés de tous les pays, rejoins nous !
+<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de <a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a> nous nous efforçons d'unir les communautés de tous les pays, rejoins nous !
 
 # <Yossur-Project-Title>
 
