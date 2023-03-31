@@ -30,8 +30,16 @@ Theme compl√®tement personnalisable pour Discord Bot Maker V2.0 traduit en fran√
 ```
 
 ## Screenshots
-  
-![Screen0](Screenshots/02.png)
+
+![Screen0](Screenshots/04.png)
+
+---
+![Screen1](Screenshots/02.png)
+
+---
+![Screen2](Screenshots/03.png)
+
+---
 
 ## License
 
@@ -39,4 +47,4 @@ Open Source
 
 ## Credits
 - ex
----
+
