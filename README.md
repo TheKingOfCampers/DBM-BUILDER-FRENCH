@@ -1,7 +1,7 @@
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/43226244/176820884-f88a7398-f54a-4a00-9860-773c751b6d0f.png" width="350" title="hover text">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1091765843450413167/French-DBM.png" width="350" title="hover text">
 </p>
 
 
