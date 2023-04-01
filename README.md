@@ -23,7 +23,7 @@ Theme complètement personnalisable pour Discord Bot Maker V2.0 traduit en fran�
 ## Installation
 ```md
 - Fermez Discord Bot Maker
-- Décompressez l'archive ici -> "Steam\steamapps\common\Discord Bot Maker"
+- Déposez le dossier Resources ici -> "Steam\steamapps\common\Discord Bot Maker"
 - Relancez Discord Bot Maker
 ```
 
