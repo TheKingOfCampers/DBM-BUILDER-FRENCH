@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="../style/semantic/dist/semantic.css">
+	<link rel="stylesheet" type="text/css" href="../html/customize/customizeac.css">
+	<head>
+		<meta charset="UTF-8">
+		<title>Raw Data</title>
+	</head>
+	<body>
+
+<div class="pusherraw">
+		<textarea class="customize-ta" id="main" rows="9" style="font-family: monospace; margin-left: 20px; margin-right: 20px; width: 93%; height: 80%; resize: none;"></textarea>
+		<div style="text-align: center;">
+			<button style="text-align: center; margin-top: 20px;" onclick="resolve()" class="tiny compact ui labeled icon button"><i class="legal icon"></i><span id="savedata">Save Data</span></button> <b style="margin:0px 20px" class="customize-copy"><button onclick="copiar()" style="text-align: center; margin-top: 20px;" class="tiny compact ui labeled icon button"><i class="edit icon"></i><span>Selecionar & Copiar</span></button></b>
+		</div>
+</div>
+
+		<div style="display:none">
+
+			<table class="divcustomize" style="text-align:right;width:98%">
+				<tr><th class="th1">Image de l'arrière plan:</th><th class="thx"><input class="round" id="cordofundo" name="imagemdofundoqr" type="text" placeholder="url(LINK)" onkeyup="setcustomize()"><th class="thx2"><a onclick="restaurar1();setcustomize()"><span class="botaocustomize2">Padrão</span></a></th></th></tr>
+				<tr><th class="th1">Couleur de l'arrière plan:</th><th class="thx"><input class="round" id="cordofundo2" name="cordofundoqr" type="text" placeholder="rgba(0,0,0,0.7)" onkeyup="setcustomize()"><th class="thx2"><a onclick="restaurar2();setcustomize()"><span class="botaocustomize2">Padrão</span></a></th></th></tr>
+				</table>
+		
+		<div class="cdivsep">
+				<b><center>Recursos</center></b><br/>
+
+				<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Ocultar a Guia de Notas</div>
+<br>
+<div style="margin-left: 5px;" class="ui toggle checkbox">
+	<input id="notasgat" type="checkbox" onchange="setcustomize()">
+</div>
+</div>
+
+<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Ocultar os FIltros</div>
+<br>
+<div style="margin-left: 5px;" class="ui toggle checkbox">
+	<input id="filtrosgat" type="checkbox" onchange="setcustomize()">
+</div>
+</div>
+
+<div name="filtrosgat1"></div>
+<div name="filtrosgat2"></div>
+<div name="filtrosgat3"></div>
+<div name="filtrosgat4"></div>
+<div name="notasport"></div>
+
+<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Ocultar Marcador & Salvar</div>
+<br>
+<div style="margin-left: 5px;" class="ui toggle checkbox">
+	<input id="msavegat" type="checkbox" onchange="setcustomize()">
+</div>
+</div>
+<div name="msavegat1"></div>
+<div name="msavegat2"></div>
+
+				<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Animação ao salvar o projeto</div>
+
+<div style="display:block" id="autoconfig1">
+<select style="width: 100%" id="efeitoinicial" class="efeitoinicial" onchange="setcustomize()">
+<option value="nenhum">Nenhum</option>
+<option value="jiggle" selected>Balançar [Padrão]</option>
+<option value="shake">Sacudir</option>
+<option value="pulse">Pulsar</option>
+<option value="tada">Tada</option>
+<option value="bounce">Quicar</option>
+<option value="flash">Clarão</option>
+<option value="rotate">Girar</option>
+</select><br>
+</div>
+			
+			<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Salvar projeto automaticamente</div>
+		
+						<div style="display:block" id="autoconfig1">
+					<select style="width: 100%" id="customizesalvar" class="customizesalvar">
+					  <option value="0" selected>Jamais</option>
+					  <option value="1">Toutes les 30 secondes</option>
+					  <option value="2">Toutes les 1 minutes</option>
+					  <option value="3">Toutes les 2 minutes</option>
+					  <option value="4">Toutes les 5 minutes</option>
+					  <option value="5">Toutes les 10 minutes</option>
+					  <option value="6">Toutes les 15 minutes</option>
+					  <option value="7">Toutes les 30 minutes</option>
+					  <option value="8">Toutes les 45 minutes</option>
+					  <option value="9">Toutes les 60 minutes</option>
+					</select><br><br>
+					<a onclick="iniciarautosave();ocultarautosave();setcustomize()"><span class="botaocustomize2">Aplicar</span></a>
+				</div>
+					<div style="display:none" id="autoconfig2">
+						<b style="font-size:16px !important"><span name="saveatual">Nunca</span></b><br><br>
+						<a onclick="clearInterval(autosavec);exibirautosave()"><span class="botaocustomize2">Alterar / Parar</span></a>
+					</div>
+					<br><a onclick="salvarprojeto()"><span style="float:left;cursor:pointer"><img draggable="false" style="margin:2px;opacity: 0.5;" width="18" src="customize/save.png"></span></a><center><span name="ultimosave" style="opacity: 0.5"></span></center>
+		</div>
+		
+		<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Backup do Customize</div>
+		<span name="customizebk"></span><br></br>
+		<a onclick="customizebackup()"><span class="botaocustomize2">Salvar</span></a>
+		</div>
+		
+		<div class="cdivsep2" name="customizeloadconfig"><div class="pa">Restauração do Customize</div>
+		<div id="restconfirm1"><span name="customizeres"></span><br></br>
+		<a onclick="customizerestaurar();restconfirm1()"><span class="botaocustomize2">Restaurar</span></a> <a onclick="customizerestaurar2();restconfirm3()"><span class="botaocustomize2">Restaurar Auto</span></a></div><div id="restconfirm2" style="display:none"><br><br><a onclick="customizereload();restconfirm2()"><span class="botaocustomize2">Clique para terminar a restauração</span></a></div><div id="restconfirm3" style="display:none">Auto-Save<br><br><a onclick="customizereload();restconfirm2()"><span class="botaocustomize2">Clique para terminar a restauração</span></a></div>
+		</div>
+		
+		</div>
+		<div class="cdivsep">
+			<b><center>Corpo</center></b><br/>
+		
+			<div class="cdivsep1 mostrador11"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/3.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Fundo</a></div>
+			<center><input id="customizebf" type="text" class="round" name="trocar1" placeholder="rgba(0,0,0,0.5)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar1();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar1h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/3.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Borda</a></div>
+			<center><input id="customizebb" type="text" class="round" name="aa" placeholder="0px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		
+			<div class="cdivsep1">
+			<div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/3.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Texto</a></div>
+			<input id="customizetexto" type="color" class="savecustomizetexto" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		
+		<div class="cdivsep1 mostrador21"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/4.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Fundo da Caixa</a></div>
+		<center><input id="customizecxf" type="text" class="round" name="trocar2" placeholder="rgba(60,60,60,0.9)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar2();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar2h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/4.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Borda da Caixa</a></div>
+		<center><input id="customizecxb" type="text" class="round" name="trocar" placeholder="0px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+			<div class="cdivsep1">
+			<div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/4.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Texto da Caixa</a></div>
+			<input id="customizecxtxt" type="color" class="savecustomizecxtxt" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+		
+		
+			<div class="cdivsep1 mostrador81"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/1.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Fundo das ações e eventos</a></div>
+			<center><input id="customizecorpo1" type="text" class="round" name="trocar8" placeholder="rgba(0,0,0,0.5)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar8();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar8h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/2.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Borda das ações e eventos</a></div>
+			<center><input id="customizecorpo2" type="text" class="round" name="aa" placeholder="0px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		</div>
+		
+		
+		<div class="cdivsep">
+			<b><center>Menu</center></b><br/>
+		
+			<div class="cdivsep1 mostrador41"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Fundo</a></div>
+			<center><input id="customizemenu1" type="text" class="round" name="trocar4" placeholder="rgba(40,40,40,0.5)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar4();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar4h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Borda</a></div>
+			<center><input id="customizemenu2" type="text" class="round" name="aa" placeholder="1px solid rgba(250,250,250,0.5)" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		
+			<div class="cdivsep1">
+			<div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Texto</a></div>
+			<input id="customizemenu3" type="color" class="savecustomizemenu3" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		
+		<div class="cdivsep1 mostrador51"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Fundo ativo</a></div>
+		<center><input id="customizemenu4" type="text" class="round" name="trocar5" placeholder="#000000" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar5();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar5h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		<div class="cdivsep1">
+			<div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Texto ativo</a></div>
+			<input id="customizemenu5" type="color" class="savecustomizemenu5" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Espaçamento</a></div>
+		<center><input id="customizemenu6" type="text" class="round" name="" placeholder="0px 1px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		<div class="cdivsep1"><div class="pa"><a onMouseOver="toolTip('<img src=customize/exemplos/5.jpg class=coman />', 268, 114)" onMouseOut="toolTip()">Arredondamento</a></div>
+		<center><input id="customizemenu7" type="text" class="round" name="" placeholder="5px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		</div>
+		
+		<div class="cdivsep">
+			<b><center>Seletores de Ações & Eventos</center></b><br/>
+		
+			<div class="cdivsep1 mostrador61"><div class="pa">Fundo</div>
+			<center><input id="customizeae1" type="text" class="round" name="trocar6" placeholder="#222" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar6();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar6h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		
+			<div class="cdivsep1"><div class="pa">Borda</div>
+		<center><input id="customizeae5" type="text" class="round" name="" placeholder="1px solid #333" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+			<div class="cdivsep1">
+			<div class="pa">Texto</div>
+			<input id="customizeae2" type="color" class="savecustomizeae2" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		<div class="cdivsep1 mostrador71"><div class="pa">Fundo ativo</div>
+		<center><input id="customizeae3" type="text" class="round" name="trocar7" placeholder="#000" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar7();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar7h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		
+		<div class="cdivsep1"><div class="pa">Borda ativa</div>
+		<center><input id="customizeae6" type="text" class="round" name="" placeholder="1px solid rgb(150,150,200)" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+			<div class="cdivsep1">
+			<div class="pa">Texto ativo</div>
+			<input id="customizeae4" type="color" class="savecustomizeae4" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		
+		
+		
+		
+		
+		</div>
+		
+		<div class="cdivsep">
+			<b><center>Botões</center></b><br/>
+		
+			<div class="cdivsep1 mostrador31"><div class="pa">Fundo</div>
+			<center><input id="customizebotao" type="text" class="round" name="trocar3" placeholder="rgba(200,250,250,0.5)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar3();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar3h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		
+			<div class="cdivsep1">
+			<div class="pa">Texto</div>
+			<input id="customizebotaotexto" type="color" class="savecustomizebotaotexto" placeholder="#000000" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		
+		<div class="cdivsep1 mostrador110"><div class="pa">Fundo Hover</div>
+		<center><input id="customizebotaoh" type="text" class="round" name="trocar19" placeholder="rgba(200,250,250,0.7)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar19();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar19h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		
+		<div class="cdivsep1">
+		<div class="pa">Texto Hover</div>
+		<input id="customizebotaotextoh" type="color" class="savecustomizebotaotextoh" placeholder="#000000" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		</div>
+		
+		
+		
+		
+		<div class="cdivsep">
+			<b><center>Janela de ações</center></b><br/>
+		
+			<div class="cdivsep1 mostrador106">
+			<div class="pa">Fundo da Guia</div>
+			<center><input id="customizej1" name="acguia" type="text" class="round" placeholder="#111" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar16();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar16h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+				
+			<div class="cdivsep1 mostrador107">
+				<div class="pa">Imagem do fundo</div><input id="customizej7" name="trocar16" type="text" class="round" placeholder="url(./bg/01.gif) center" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+					
+			<div class="cdivsep1">
+			<div class="pa">Texto</div><input id="customizej2" name="savej2" type="color" class="savej2" placeholder="#C8C8C8" value="#C8C8C8" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+				
+			<div class="cdivsep1 mostrador108">
+			<div class="pa">Fundo dos títulos</div><center><input id="customizej3" name="trocar17" type="text" class="round" placeholder="#222" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar17();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar17h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+					
+			<div class="cdivsep1 mostrador109">
+			<div class="pa">Fundo das caixas</div><center><input id="customizej4" name="trocar18" type="text" class="round" placeholder="#333" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar18();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar18h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+				
+			<div class="cdivsep1">
+			<div class="pa">Texto das caixas</div><input id="customizej5" name="savej5" type="color" class="savej5" placeholder="#C8C8C8" value="#C8C8C8" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+			
+			<div class="cdivsep1">
+			<div class="pa">Borda das caixas</div><input class="round" id="customizej6" name="actxtfundo" type="text" placeholder="1px solid #555" onkeyup="setcustomize()"></div>
+				
+		
+			</div>
+		
+		<div class="cdivsep">
+			<b><center>Marcador</center></b><br/>
+		
+			<div class="cdivsep1 mostrador101"><div class="pa">Fundo</div>
+			<center><input id="cordomarcador" type="text" class="round" name="trocar10" placeholder="#ffff00" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar10();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar10h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+				
+			<div class="cdivsep1">
+			<div class="pa">Texto</div><input id="cordomarcadortxt" type="color" class="savemarktxt" placeholder="#000000" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+		
+			</div>
+			
+		<div class="cdivsep">
+		<b><center>Bloco de notas</center></b><br/>
+		
+		<div class="cdivsep1 mostrador91">
+		<div class="pa">Fundo</div>
+		<center><input id="notasfundo" type="text" name="notasfundo" class="round" placeholder="rgba(0,0,0,0.6)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar9();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar9h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		<div class="cdivsep1">
+		<div class="pa">Texto</div><input id="notastxt" type="color"class="savenotastxt" name="notastxtqr" placeholder="#ffffff" onkeyup="setcustomize()" onchange="setcustomize()"></div>
+				
+		<div class="cdivsep1">
+		<div class="pa">Borda</div><input class="round" id="bordanotas" name="notasbordaqr" type="text" placeholder="1px solid rgba(60,60,60)" onkeyup="setcustomize()"></div>
+		
+		</div>
+		
+		<div class="cdivsep">
+			<b><center>Barra de Rolagem</center></b><br/>
+		
+			<div class="cdivsep1 mostrador102"><div class="pa">Fundo</div>
+			<center><input id="customizerolagem1" type="text" class="round" name="trocar12" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar12();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar12h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa">Borda</div>
+			<center><input id="customizerolagem2" type="text" class="round" name="aa" placeholder="1px solid #222" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		
+			<div class="cdivsep1 mostrador103">
+			<div class="pa">Barra</div>
+			<center><input id="customizerolagem3" type="text" class="round" name="trocar13" placeholder="rgb(100,150,200)" onkeyup="setcustomize()" onchange="setcustomize()"><br><a onclick="trocar13();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar13h();setcustomize()"><span class="botaocustomize2">Botão</span></a></center>
+		</div>
+		
+		
+		<div class="cdivsep1 mostrador104"><div class="pa">Barra selecionada</div>
+		<center><input id="customizerolagem4" type="text" class="round" name="trocar14" placeholder="rgb(200,200,200)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar14();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar14h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		<div class="cdivsep1">
+			<div class="pa">Botões on/none</div>
+			<input id="customizerolagem5" type="text" class="round" placeholder="none" onkeyup="setcustomize()" onchange="setcustomize()">
+		</div>
+		
+		<div class="cdivsep1 mostrador105"><div class="pa">Botões</div>
+		<center><input id="customizerolagem6" type="text" class="round" name="trocar15" placeholder="rgb(100,150,200)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar15();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar15h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		<div class="cdivsep1"><div class="pa">Tamanho</div>
+		<center><input id="customizerolagem7" type="text" class="round" name="" placeholder="12px" onkeyup="setcustomize()" onchange="setcustomize()"></center></div>
+		
+		</div>
+
+		<div class="cdivsep">
+			<b><center>TABs</center></b><br/>
+		
+			<div class="cdivsep1"><div class="pa">Fundo</div>
+			<center><input id="tabbg" type="text" class="round" name="trocar20" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar20();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar20h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa">Fundo Hover</div>
+			<center><input id="tabbghover" type="text" class="round" name="trocar21" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar21();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar21h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa">Borda</div>
+			<center><input id="tabborder" type="text" class="round" name="trocar22" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar22();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar22h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa">Fundo do Menu</div>
+			<center><input id="tabbgtop" type="text" class="round" name="trocar23" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar23();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar23h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+			<div class="cdivsep1"><div class="pa">Fundo do Menu Ativo</div>
+			<center><input id="tabbgtopativo" type="text" class="round" name="trocar24" placeholder="rgb(0,0,0)" onkeyup="setcustomize()" onchange="setcustomize()"></center><br><a onclick="trocar24();setcustomize()"><span class="botaocustomize2">Caixa</span></a> <a onclick="trocar24h();setcustomize()"><span class="botaocustomize2">Botão</span></a></div>
+		
+		
+		</div>
+		
+		<center><br><a style="cursor:pointer" onclick="DBM.openLink('https://github.com/XinXyla/Customize-DBM-v2')">Versão 0.5</a><br>
+			Criado por: <a style="cursor:pointer" onclick="DBM.openLink('https://discord.com/users/172782058396057602')">XinXyla</a><br>
+			<br><br>
+			<a style="cursor:pointer" onclick="DBM.openLink('https://discord.gg/KfrffKXxbb')"><div id="browsebutton" style="width:150px">Visite nosso servidor</div></a><br><br><br></center>
+			
+		<div class="bordanotas"></div><div class="notasfundo"></div><div class="notastxt"></div><div class="marcador"></div><div class="customizetexto"></div><div class="customizebf"></div><div class="customizebb"></div><div class="customizecxtxt"></div><div class="customizecxb"></div><div class="customizecxf"></div>
+		<div class="customizebotao"></div><div class="customizebotaotexto"></div><div class="customizebotaoh"></div><div class="customizebotaotextoh"></div>
+		<div class="customizemenu1"></div><div class="customizemenu2"></div><div class="customizemenu3"></div><div class="customizemenu4"></div><div class="customizemenu5"></div><div class="customizemenu6"></div><div class="customizemenu7"></div>
+		<div class="customizeae1"></div><div class="customizeae2"></div><div class="customizeae3"></div><div class="customizeae4"></div><div class="customizeae5"></div><div class="customizeae6"></div>
+		<div class="customizecorpo1"></div><div class="customizecorpo2"></div>
+		<div class="customizerolagem1"></div><div class="customizerolagem2"></div><div class="customizerolagem3"></div><div class="customizerolagem4"></div><div class="customizerolagem5"></div><div class="customizerolagem6"></div><div class="customizerolagem7"></div>
+		<div class="customizej1"></div><div class="customizej2"></div><div class="customizej3"></div><div class="customizej4"></div><div class="customizej5"></div><div class="customizej6"></div><div class="customizej7"></div>
+		<div class="tabbg"></div><div class="tabbghover"></div><div class="tabborder"></div><div class="tabbgtop"></div><div class="tabbgtopativo"></div>
+
+			</div>
+
+		</div>
+
+
+	</body>
+	<link rel="stylesheet" type="text/css" id="maintheme" href="../../../themes/Default/main.css">
+	<script>
+		if(typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+	
+	<script type="text/javascript" src="customize/customize.js"></script>
+	<script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../style/semantic/dist/semantic.min.js"></script>
+	<script type="text/javascript" src="../lib/dbm/Application.js"></script>
+	<script type="text/javascript" src="customize/gerarcor.js"></script>
+	<script>
+		if(window.module) module = window.module;
+	</script>
+</html>
