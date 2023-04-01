@@ -1,0 +1,109 @@
+/*
+Criado por XinXyla#0001
+Todos os direitos reservados
+*/
+
+
+:root {
+
+	/* Marcador de comandos e eventos */
+	--mark-color: var(--config-marcador) !important;
+	--mark-colortxt: var(--config-marcadortxt) !important;
+    
+    --tabs-background-color: var(--config-tabbg) !important;
+    --tabs-background-color-hover: var(--config-tabbghover) !important;
+    --tabs-border-color: var(--config-tabborder) !important;
+    --tabs-background-color-top: var(--config-tabbgtop) !important;
+    --tabs-background-color-unfocused: var(--config-tabbgtopativo) !important;
+}
+
+body{color: var(--config-customizej2) !important}
+
+.pusher{background:var(--config-customizej7) !important;color:var(--config-customizej2)!important}
+#theHead div{background:var(--config-customizej1) !important}
+.action-footer{background:var(--config-customizej1) !important}
+
+.pusher textarea{background:var(--config-customizej4) !important;color:var(--config-customizej5)!important;border:var(--config-customizej6)!important;resize:both !important}
+.pusher2 textarea{background:var(--config-customizej4) !important;color:var(--config-customizej5)!important;border:var(--config-customizej6)!important}
+.pusher input{background:var(--config-customizej4) !important;color:var(--config-customizej5)!important;border:var(--config-customizej6)!important}
+.pusher select{background:var(--config-customizej4) !important;color:var(--config-customizej5)!important;border:var(--config-customizej6)!important}
+
+.pusherraw{background:var(--config-customizej7) !important;color:var(--config-customizej2)!important;height:100vh;padding:20px 0px 0px 0px}
+.pusherraw textarea{background:var(--config-customizej4) !important;color:var(--config-customizej5)!important;border:var(--config-customizej6)!important;resize:both !important}
+
+.icon.button{color: var(--config-customizebotaotexto) !important;background: var(--config-customizebotao) !important;}
+.icon.button:hover{color: var(--config-customizebotaotextoh) !important;background: var(--config-customizebotaoh) !important;}
+
+.dbminputlabel{color: var(--config-customizej2) !important;background: var(--config-customizej3) !important;border: var(--config-customizej6) !important;}
+.dbm_animated:hover{color: var(--config-customizebotaotextoh) !important;background: var(--config-customizebotaoh) !important;}
+
+  ::-webkit-scrollbar-track {background: var(--config-customizerolagem1) !important}
+::-webkit-scrollbar {
+    width: var(--config-customizerolagem7) !important;
+    background: var(--config-customizerolagem3) !important;
+	border: var(--config-customizerolagem2) !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--config-customizerolagem3) !important;
+	border: var(--config-customizerolagem2) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--config-customizerolagem4) !important;border: var(--config-customizerolagem2) !important;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+	border: var(--config-customizerolagem2) !important;
+}
+
+::-webkit-scrollbar-button:end:increment {
+    background: var(--config-customizerolagem6) !important;
+	display: var(--config-customizerolagem5) !important;
+	border: var(--config-customizerolagem2) !important;
+}
+::-webkit-scrollbar-button:end:increment:hover{
+    background: var(--config-customizerolagem4) !important;
+	display: var(--config-customizerolagem5) !important;
+	border: var(--config-customizerolagem2) !important;
+}
+::-webkit-scrollbar-button:start:decrement {
+    background: var(--config-customizerolagem6) !important;
+	display: var(--config-customizerolagem5) !important;
+	border: var(--config-customizerolagem2) !important;
+}
+::-webkit-scrollbar-button:start:decrement:hover{
+    background: var(--config-customizerolagem4) !important;
+	border: var(--config-customizerolagem2) !important;}
+
+::-webkit-scrollbar-track-piece:vertical:start {
+    background: var(--config-customizerolagem1) !important;
+	border: var(--config-customizerolagem2) !important;
+    background-repeat: no-repeat, repeat-y;
+}
+
+::-webkit-scrollbar-track-piece:vertical:end {
+    background: var(--config-customizerolagem1) !important;
+	border: var(--config-customizerolagem2) !important;
+    background-repeat: no-repeat, repeat-y;
+    background-position: bottom left, 0 0;
+}
+
+::-webkit-scrollbar-track-piece:horizontal:start {
+    background: var(--config-customizerolagem1) !important;
+	border: var(--config-customizerolagem2) !important;
+    background-repeat: no-repeat, repeat-y;
+}
+
+::-webkit-scrollbar-track-piece:horizontal:end {
+    background: var(--config-customizerolagem1) !important;
+	border: var(--config-customizerolagem2) !important;
+    background-repeat: no-repeat, repeat-y;
+    background-position: bottom left, 0 0;
+}
+
+
+
+
+
+
+
+
