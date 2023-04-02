@@ -4,30 +4,34 @@
   <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1091765843450413167/French-DBM.png" width="350" title="hover text">
 </p>
 
+<p align="center">
+<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de <a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a>
+</p>
 
-<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de <a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a> nous nous efforçons d'unir les communautés de tous les pays, rejoins nous !
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
 
-# <Yossur-Project-Title>
+<h1 align="center">Description</h1>
 
-## Description
+<p align="center">Theme complètement personnalisable pour Discord Bot Maker V2.0 traduit en français</p>
 
-Theme complètement personnalisable pour Discord Bot Maker V2.0 traduit en français
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
 
-## Table of Contents
+<h1 align="center">Installation</h1>
 
-- [Installation](#installation)
-- [Screenshots](#screenshots)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
 ```md
 - Fermez Discord Bot Maker
 - Déposez le dossier Resources ici -> "Steam\steamapps\common\Discord Bot Maker"
 - Relancez Discord Bot Maker
 ```
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
 
-## Screenshots
+<h1 align="center">Screenshots</h1>
 
 ![Screen0](Screenshots/04.png)
 
@@ -39,9 +43,16 @@ Theme complètement personnalisable pour Discord Bot Maker V2.0 traduit en fran�
 
 ---
 
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
+
 <h1 align="center">License</h1>
 <p align="center">Open Source</p>
 
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
 
 <h1 align="center">Credits</h1>
 <p align="center">
