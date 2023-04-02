@@ -5,10 +5,16 @@
 </p>
 
 <p align="center">
-<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de
+<a href="https://discord.gg/HBc9u9tktd" rel="nofollow">DBM BRAZIL MODS</a> est une communauté multi langage dédiée à la modification, l'extension et l'amélioration de <a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a>
 </p>
+
 <p align="center">
-<a href="https://store.steampowered.com/app/682130/Discord_Bot_Maker" rel="nofollow">Discord Bot Maker</a>
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+</p>
+
+<p align="center">
+  <a href="https://github.com/TheKingOfCampers/Customize-DBM-v2-French/archive/refs/heads/main.zip"</a>
+  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092091889970319511/Download-Button.png" width="200">
 </p>
 
 <p align="center">
