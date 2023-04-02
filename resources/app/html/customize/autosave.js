@@ -72,8 +72,8 @@ async function attActions() {
 	const value = parseInt(select.value);
 	const fs = require("fs");
 
-	const actionsUrl = "https://api.github.com/repos/TheKingOfCampers/French/contents/actions?ref=main";
-	const eventsUrl = "https://api.github.com/repos/TheKingOfCampers/French/contents/events?ref=main";
+	const actionsUrl = "https://api.github.com/repos/TheKingOfCampers/DBM-Mods-French/contents/actions?ref=main";
+	const eventsUrl = "https://api.github.com/repos/TheKingOfCampers/DBM-Mods-French/contents/events?ref=main";
 
 	const actionsPath = this.DBM.actLocs.toString();
 	const eventsPath = this.DBM.evtLocs.toString();
