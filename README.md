@@ -55,10 +55,6 @@
 <h1 align="center">License</h1>
 <p align="center">Open Source</p>
 
-<p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
-</p>
-
 <h1 align="center">Credits</h1>
 <p align="center">
   Créé par: <a href="https://discord.com/users/172782058396057602" rel="nofollow">XinXyla</a> / <a href="https://discord.com/users/321400509326032897" rel="nofollow">Tempest</a>
