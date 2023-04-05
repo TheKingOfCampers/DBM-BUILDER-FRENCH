@@ -62,5 +62,5 @@
 <p align="center">Traduit par: <a href="https://discord.com/users/1042087216979116032" rel="nofollow">🆃🅷🅴 🅺🅸🅽🅶 ✅</a>
   </p>
 <p align="center">
-  <a href="https://disboard.org/fr/server/1042184752674918520" target="_blank" rel="noreferrer"> <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092019949985337484/discord-loop.gif" alt="steam" width="150" height="150"/>
+  <a href="https://discord.gg/JfZ4G6zXaV" target="_blank" rel="noreferrer"> <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092019949985337484/discord-loop.gif" alt="steam" width="150" height="150"/>
   </p>
