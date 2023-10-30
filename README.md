@@ -57,7 +57,7 @@
 <p align="center">
   Créé par: <a href="https://discord.com/users/172782058396057602" rel="nofollow">XinXyla</a> / <a href="https://discord.com/users/321400509326032897" rel="nofollow">Tempest</a>
   </p>
-<p align="center">Traduit par: <a href="https://discord.com/users/1042087216979116032" rel="nofollow">The 🅺🅸🅽🅶 Of Campers👑</a>
+<p align="center">Traduit par: <a href="https://discord.gg/v47mr3DqGh" rel="nofollow">The 🅺🅸🅽🅶 Of Campers👑</a>
   </p>
 <p align="center">
   <a href="https://discord.gg/JfZ4G6zXaV" target="_blank" rel="noreferrer"> <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092019949985337484/discord-loop.gif" alt="steam" width="150" height="150"/>
