@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1091765843450413167/French-DBM.png" width="350" title="hover text">
+  <img src="DBMmods.gif" width="350" title="hover text">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="blank.png" width="500" title="hover text">
+  <img src="blank.png" width="50" title="hover text">
 </p>
 
 <h1 align="center">Description</h1>
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="blank.png" width="500" title="hover text">
+  <img src="blank.png" width="50" title="hover text">
 </p>
 
 <h1 align="center">Installation</h1>
