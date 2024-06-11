@@ -20,9 +20,8 @@
 </p>
 
 <p align="center">
-  <img src="blank.png" width="50" title="hover text">
+  <img src="blank.png" width="10" title="hover text">
 </p>
-
 <h1 align="center">Installation</h1>
 
 ```md
