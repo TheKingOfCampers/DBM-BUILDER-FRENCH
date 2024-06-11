@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+  <img src="blank.png" width="50" title="hover text">
 </p>
 
 <h1 align="center">Description</h1>
@@ -16,11 +16,11 @@
 
 <p align="center">
   <a href="https://github.com/TheKingOfCampers/DBM-BUILDER-FRENCH/archive/refs/heads/main.zip"</a>
-  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092091889970319511/Download-Button.png" width="200">
+  <img src="Download.png" width="200">
 </p>
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1042197137598976111/1092031705453436928/blank.png" width="50" title="hover text">
+  <img src="/blank.png" width="50" title="hover text">
 </p>
 
 <h1 align="center">Installation</h1>
